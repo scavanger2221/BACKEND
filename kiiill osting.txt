@@ -1,0 +1,4 @@
+cara kill process 
+
+jalankan  node unutk mencari prosess dan id " ps aux | grep lock" 
+dan kill -9 process_id
