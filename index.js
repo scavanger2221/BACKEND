@@ -7,6 +7,7 @@ import absentRouter from './router/absent.js';
 import leaveRouter from './router/leave.js';
 import salaryRouter from './router/salary.js';
 import cors from 'cors';
+import 'dotenv/config';
 
 const app = express();
 
@@ -38,4 +39,6 @@ app.use('/absent', absentRouter);
 app.use('/leave', leaveRouter);
 app.use('/salary', salaryRouter);
 // ini menggunakan function call back, yang mana setakah listen port 5000 gunakan call back "()=>consoloe.log('tesxt anda')"
-app.listen(5000, () => console.log('Server runnning di port 5000'));
+app.listen(process.env.PORT || 3001, '0.0.0.0', () => {
+    console.log("Server is running.");
+  });
